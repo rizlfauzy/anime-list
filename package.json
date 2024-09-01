@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scss": "sass --watch app/styles/scss/style.scss:app/styles/css/style.css --style compressed"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
