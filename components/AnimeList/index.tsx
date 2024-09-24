@@ -14,9 +14,9 @@ export default function AnimeList({ api }: { api: { data: Anime[] } }) {
       {api?.data?.map((anime: Anime) => {
         return (
           <div key={anime.mal_id} className="shadow-xl">
-            <Link href={`/${anime.mal_id}`} className="cursor-pointer">
+            <Link href={`/${anime.mal_id}`} className="cursor-pointer group">
               <Image src={anime.images.webp.image_url} alt="..." width={350} height={350} className="object-cover w-full max-h-64" />
-              <h3 className="font-bold md:text-xl text-md p-4">{anime.title}</h3>
+              <h3 className="font-bold md:text-xl text-md p-4 text-color-primary group-hover:text-color-accent transition-all">{anime.title}</h3>
             </Link>
           </div>
         );

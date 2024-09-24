@@ -9,12 +9,15 @@ const config: Config = {
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    colors: {
+      color: { primary: "#eee", accent: "#ffc639", secondary: "#393e46", dark: "#222831" },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
     themes: ["light", "dark", "retro"],
     prefix: "ds-",
-    darkTheme: "light"
+    darkTheme: "light",
   },
 };
 export default config;

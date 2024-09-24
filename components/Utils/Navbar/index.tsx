@@ -15,7 +15,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-indigo-500 sticky top-0">
+    <header className="bg-color-accent sticky top-0">
       <div className="flex md:flex-row flex-col justify-between p-4 gap-2 items-center">
         <Link href={`/`} className="font-bold text-white text-2xl" onClick={home_click}>
           AnimeList
