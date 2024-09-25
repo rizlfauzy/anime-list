@@ -9,19 +9,16 @@ export default function InputSearch({input_keyword}: {input_keyword: React.RefOb
   const search_params = useSearchParams();
   const router = useRouter();
 
-  const search_anime = useCallback(
-    (keyword: string) => {
-      const params = new URLSearchParams(search_params);
-      if (keyword != "") {
-        params.set("q", keyword);
-        router.replace(`/search?${params.toString()}`);
-      } else {
-        params.delete("q");
-        router.replace(`/`);
-      }
-    },
-    [router, search_params]
-  );
+  const search_anime = (keyword: string) => {
+    const params = new URLSearchParams(search_params);
+    if (keyword != "") {
+      params.set("q", keyword);
+      router.push(`/search?${params.toString()}`);
+    } else {
+      params.delete("q");
+      router.push(`/`);
+    }
+  };
 
   const handle_search = debounce((e: React.ChangeEvent<HTMLInputElement>) => {
     const keyword = e.target.value;
